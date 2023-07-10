@@ -1,0 +1,417 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow: auto;
+}
+
+/* WebKit (Chrome, Safari, Opera, etc.) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(
+    178,
+    142,
+    110
+  ); /* Change the background color of the thumb */
+}
+
+/* Firefox */
+::-moz-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+::-moz-scrollbar-thumb {
+  background-color: rgb(
+    178,
+    142,
+    110
+  ); /* Change the background color of the thumb */
+}
+/* WebKit (Chrome, Safari, Opera, etc.) */
+::-webkit-scrollbar-track {
+  background-color: rgb(
+    191,
+    172,
+    131
+  ); /* Change the background color of the track */
+}
+
+/* Firefox */
+::-moz-scrollbar-track {
+  background-color: rgb(
+    191,
+    172,
+    131
+  ); /* Change the background color of the track */
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+  height: 1000px;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Adjust the opacity as desired */
+  opacity: 0.7;
+}
+
+.margin-right-200 {
+  margin-right: 200px;
+}
+
+.margin-right-40 {
+  margin-right: 40px;
+}
+
+.navbar {
+  margin-top: 50px;
+  background-color: rgba(191, 172, 131, 0.863);
+  border-color: rgb(191, 172, 131) !important;
+  color: rgba(255, 255, 255, 0.747) !important;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(191, 172, 131);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Adjust the value as needed */
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.932) !important;
+}
+
+.footer {
+  background-color: rgba(191, 172, 131, 0.932) !important;
+  border-color: rgb(191, 172, 131) !important;
+  padding: 20px 0;
+  width: 100% !important;
+}
+
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-col {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.747) !important;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(178, 142, 110);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.747) !important;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: show;
+  text-overflow: ellipsis;
+}
+
+.footer-col ul li a:hover {
+  color: rgba(255, 255, 255, 0.747) !important;
+  padding-left: 50px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+.opet {
+  width: 240px !important;
+  height: 240px !important;
+}
+
+.button {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 15px 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  background-color: rgb(196, 191, 183);
+  border: none;
+  font-weight: 300;
+  margin: 5px;
+  padding: 10px;
+  width: 280px;
+}
+
+.submit-btn {
+  border: none;
+  border-radius: 25px;
+  color: rgba(255, 255, 255, 0.747);
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 15px 50px;
+  text-transform: uppercase;
+}
+
+#login .submit-btn {
+  background-color: rgb(178, 142, 110);
+}
+
+#register .submit-btn {
+  background-color: rgb(191, 172, 131);
+}
+
+#container {
+  background-color: rgb(191, 172, 131);
+  border-radius: 10px;
+  height: 550px;
+  margin: 5% auto;
+  overflow: hidden;
+  width: 1000px;
+}
+
+#login {
+  background-color: rgba(255, 255, 255, 0.747);
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  top: -550px;
+  z-index: 1;
+}
+
+#register {
+  background-color: rgba(255, 255, 255, 0.747);
+  float: right;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  top: -550px;
+  z-index: 1;
+}
+
+#login h1,
+#register h1 {
+  padding: 20% 0 25px;
+}
+
+#login h1 {
+  color: rgb(178, 142, 110);
+}
+
+#register h1 {
+  color: rgb(191, 172, 131);
+}
+
+#login p,
+#register p {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  padding: 20px;
+}
+
+#forgot-pass {
+  border-bottom: 1px solid rgb(178, 142, 110);
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 3px;
+  text-decoration: none;
+}
+
+#cover {
+  background: rgb(191, 172, 131);
+  color: rgba(255, 255, 255, 0.747);
+  height: 550px;
+  margin: 0 0 0 50%;
+  position: relative;
+  text-align: center;
+  transition: margin 0.7s, background 0.5s, display 1s, width 1s;
+  width: 50%;
+  z-index: 5;
+}
+
+#cover h1 {
+  padding-top: 38%;
+}
+
+#cover p {
+  font-weight: 300;
+  line-height: 22px;
+  padding: 30px 45px 40px;
+}
+
+.login-in {
+  display: none;
+}
+
+.sub {
+  position: relative;
+  top: -11px;
+}
+
+#cover:target {
+  background: rgb(178, 142, 110);
+  margin: 0;
+}
+
+#cover:target .sign-up {
+  display: none;
+}
+
+#cover:target .login-in {
+  display: inline-block;
+}
+
+#cover:target .login-div {
+  width: 35%;
+}
+
+#credit {
+  color: #bebebe;
+  font-size: 14px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.747);
+  border-radius: 10px;
+  height: 550px;
+  margin: 5% auto;
+  overflow: hidden;
+  position: relative;
+  width: 1000px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.sign-up-container {
+  transform: translateX(0);
+}
+
+.login-in-container {
+  transform: translateX(100%);
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .login-in-container {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(0);
+}
+
+.fa-bookmark {
+  font-family: "Font Awesome 5 Free";
+}

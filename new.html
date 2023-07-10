@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="shortcut icon" href="" />
+
+    <title>Libra</title>
+    <link rel="stylesheet" href="new.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+  </head>
+  <body>
+    <div class="loader">
+      <img src="giphy.gif" alt="Loading"/>
+    </div>
+    
+    <script src="new.js"></script>
+
+
+    <div id="app">
+      <div class="container">
+        <div class="title">
+          <h2>Your Favorite Place <br> To Find Books</h2>
+          <h1>LIBRA</h1>
+        </div>
+      </div>
+      <nav
+        class="navbar navbar-expand-sm  navbar-dark shadow-5-strong"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              id="logo1.png"
+              src="libraa.png"
+              alt="Logo"
+              width="100"
+              height="100"
+              class="logo d-inline-block align-text-center"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item d-lg-block margin-right-200">
+                <div class="unique-form">
+                  <label for="unique-search">Search for stuff</label>
+                  <input id="unique-search" type="search" placeholder="I want to read..." autofocus required />
+                  <button type="submit">Go</button>    
+                </div>
+              </li>
+              <li class="nav-item margin-right-40">
+                <a class="navbar-brand" href="new.html"> HOME </a>
+              </li>
+              <li v-if="!store.currentUser" class="nav-item margin-right-40">
+                <a class="navbar-brand" href="login.html"> LOGIN </a>
+              </li>
+              <li v-if="store.currentUser" class="nav-item margin-right-40">
+                <a href="#" class="nav-link" @click.prevent="logout">
+                  LOGOUT
+                </a>
+              </li>
+              <li class="nav-item margin-right-200">
+                <router-link to="admin" class="nav-link" aria-current="page">
+                  ADMIN
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br> <br> 
+      <div>
+        <div class="row">
+          <div class="col-12">
+            <div class="iza">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="coraline.jpg" class="d-block w-100 " alt="Coraline" >
+                  </div>
+                  <div class="carousel-item">
+                    <img src="cthulhu.jpg" class="d-block w-100" alt="Cthulhu">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="oneofus.jpg" class="d-block w-100" alt="One of Us">
+                  </div>
+                </div>
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="lil active"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="lil"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="lil"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="caption">
+          Words Mean More <br />
+          Than You Think! <br />
+        </p>
+        <button type="button" class="begin btn btn-outline-warning explore-button">
+          Begin Exploring
+        </button>
+      </div>
+      
+
+      <div>
+       
+      </div>
+      
+      </div>
+
+      
+      
+      <section id="genres">
+        <div class="container">
+          <div class="row">
+            <!-- First row of images -->
+            <div class="col-md-2">
+              <img src="fantasy.jpg" alt="Image 1" />
+              <div class="overlay">
+                <p class="overlay-text">Fantasy</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="history.jpg" alt="Image 2" />
+              <div class="overlay">
+                <p class="overlay-text">History</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="mystery.png" alt="Image 3" />
+              <div class="overlay">
+                <p class="overlay-text">Mystery</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="fiction.jpg" alt="Image 4" />
+              <div class="overlay">
+                <p class="overlay-text">Fiction</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="romance.jpg" alt="Image 5" />
+              <div class="overlay">
+                <p class="overlay-text">Romance</p>
+              </div>
+            </div>
+      
+            <!-- Second row of images -->
+            <div class="col-md-2">
+              <img src="religion.jpg" alt="Image 6" />
+              <div class="overlay">
+                <p class="overlay-text">Religion</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="poetry.jpg" alt="Image 7" />
+              <div class="overlay">
+                <p class="overlay-text">Poetry</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="nonfiction.jpg" alt="Image 8" />
+              <div class="overlay">
+                <p class="overlay-text">Nonfiction</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="horror.jpg" alt="Image 9" />
+              <div class="overlay">
+                <p class="overlay-text">Horror</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="biography.jpg" alt="Image 10" />
+              <div class="overlay">
+                <p class="overlay-text">Biography</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      <br> <br> <br> <br> <br>
+      
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 mb-md-0">
+              <div class="footer-col">
+                <h4>About Us</h4>
+                <p>
+                  Libra is a platform designed to help readers discover new books
+                  by genre and provide information on where to buy them. We want
+                  to make the process of finding your next favorite book as easy
+                  as possible. Our platform also allows users to write notes about
+                  the books they read and track their progress.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">returns</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment options</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-6 mb-4 mb-md-0">
+              <div class="footer-col">
+                <img src="giphy.gif" alt="Animated GIF" class="opet">
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      
+      
+      
+      
+    </div>
+
+    <!-- built files will be auto injected -->
+  </body>
+</html>
